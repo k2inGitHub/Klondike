@@ -358,6 +358,7 @@
   jni/../../../Classes/KTDate.hpp jni/../../../Classes/SpritePool.hpp \
   jni/../../../Classes/Layer_Setting.hpp \
   jni/../../../Classes/KTPauseLayer.h \
+  jni/../../../Classes/Item_Setting.hpp \
   jni/../../../Classes/SolitaireKlondikeViewModel.h \
   jni/../../../Classes/BottomMenu.h \
   jni/../../../Classes/HighScoreModel.hpp \
@@ -1090,6 +1091,8 @@ jni/../../../Classes/SpritePool.hpp:
 jni/../../../Classes/Layer_Setting.hpp:
 
 jni/../../../Classes/KTPauseLayer.h:
+
+jni/../../../Classes/Item_Setting.hpp:
 
 jni/../../../Classes/SolitaireKlondikeViewModel.h:
 

@@ -358,7 +358,8 @@
   /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio \
   /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg \
   jni/../../../Classes/SpritePool.hpp \
-  jni/../../../Classes/Layer_Setting.hpp jni/../../../Classes/Trump.h \
+  jni/../../../Classes/Layer_Setting.hpp \
+  jni/../../../Classes/Item_Setting.hpp jni/../../../Classes/Trump.h \
   jni/../../../Classes/TrumpData.h
 
 jni/../../../Classes/KLPopupLayer.hpp:
@@ -1092,6 +1093,8 @@ jni/../../../Classes/DataManager.h:
 jni/../../../Classes/SpritePool.hpp:
 
 jni/../../../Classes/Layer_Setting.hpp:
+
+jni/../../../Classes/Item_Setting.hpp:
 
 jni/../../../Classes/Trump.h:
 

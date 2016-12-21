@@ -351,6 +351,7 @@
   jni/../../../Classes/Localization.hpp jni/../../../Classes/KLUtils.hpp \
   jni/../../../Classes/md5.h jni/../../../Classes/Cell_Setting.hpp \
   jni/../../../Classes/Button_Highlight.hpp \
+  jni/../../../Classes/Item_Setting.hpp \
   jni/../../../Classes/HttpManager.hpp \
   /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/writer.h \
   /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/dtoa.h \
@@ -1081,6 +1082,8 @@ jni/../../../Classes/md5.h:
 jni/../../../Classes/Cell_Setting.hpp:
 
 jni/../../../Classes/Button_Highlight.hpp:
+
+jni/../../../Classes/Item_Setting.hpp:
 
 jni/../../../Classes/HttpManager.hpp:
 

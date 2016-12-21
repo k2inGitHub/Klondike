@@ -270,7 +270,114 @@
   jni/../../../Classes/AppDelegate.h \
   jni/../../../Classes/Localization.hpp \
   jni/../../../Classes/HLAnalsytWrapper.hpp \
-  jni/../../../Classes/Global.h
+  jni/../../../Classes/Global.h jni/../../../Classes/KLPopupLayer.hpp \
+  jni/../../../Classes/KTPauseLayer.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../audio/include/Export.h \
+  jni/../../../Classes/VisibleRect.h jni/../../../Classes/KTFactory.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/../extensions/cocos-ext.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./ExtensionMacros.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./GUI/CCControlExtension/CCControlExtensions.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControl.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/../extensions/ExtensionExport.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlButton.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCInvocation.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIScale9Sprite.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/GUIExport.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./GUI/CCScrollView/CCScrollView.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./GUI/CCScrollView/CCTableView.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCScrollView/CCTableViewCell.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./physics-nodes/CCPhysicsDebugNode.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./physics-nodes/CCPhysicsSprite.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/AssetsManager.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/AssetsManagerEx.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/CCDownloader.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/CCEventAssetsManagerEx.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/Manifest.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/document.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/reader.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/rapidjson.h \
+  /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstring \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/allocators.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/encodings.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/meta.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/stack.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/strtod.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/ieee754.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/biginteger.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/diyfp.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/pow10.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/error/error.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/strfunc.h \
+  /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/iterator \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/CCEventListenerAssetsManagerEx.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./ExtensionDeprecated.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIEditBox/UIEditBox.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/GUIDefine.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../base/ObjectFactory.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIButton.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIWidget.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayoutParameter.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./Particle3D/CCParticle3DRender.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./Particle3D/CCParticleSystem3D.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./Particle3D/PU/CCPUParticleSystem3D.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/CocosGUI.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayout.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UICheckBox.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIAbstractCheckButton.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRadioButton.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIImageView.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIText.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextAtlas.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UILoadingBar.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIScrollView.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIListView.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UISlider.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextField.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextBMFont.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIPageView.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIHelper.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRichText.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIHBox.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIVBox.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRelativeBox.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIVideoPlayer.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIWebView.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIDeprecated.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayoutComponent.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UITabControl.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../editor-support/cocostudio/CocosStudioExtension.h \
+  jni/../../../Classes/KTUtils.h jni/../../../Classes/KTLayer.h \
+  jni/../../../Classes/Layer_NavigationBar.hpp \
+  jni/../../../Classes/HLAdManagerWrapper.hpp \
+  jni/../../../Classes/AdmobWrapper.h \
+  jni/../../../Classes/AdBaseWrapper.hpp \
+  jni/../../../Classes/FBWrapper.h jni/../../../Classes/UnityADWrapper.h \
+  jni/../../../Classes/VungleWrapper.h jni/../../../Classes/KLColor.hpp \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpClient.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpRequest.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpResponse.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpCookie.h \
+  jni/../../../Classes/KLUtils.hpp jni/../../../Classes/md5.h \
+  jni/../../../Classes/HighScoreManager.hpp \
+  jni/../../../Classes/HighScoreModel.hpp \
+  jni/../../../Classes/KTDate.hpp jni/../../../Classes/DataManager.h \
+  /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../tinyxml2/tinyxml2.h \
+  /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cctype \
+  /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/climits \
+  /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio \
+  /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg \
+  jni/../../../Classes/SpritePool.hpp \
+  jni/../../../Classes/Layer_Setting.hpp \
+  jni/../../../Classes/Item_Setting.hpp
 
 jni/../../../Classes/iOSWrapper.hpp:
 
@@ -813,3 +920,231 @@ jni/../../../Classes/Localization.hpp:
 jni/../../../Classes/HLAnalsytWrapper.hpp:
 
 jni/../../../Classes/Global.h:
+
+jni/../../../Classes/KLPopupLayer.hpp:
+
+jni/../../../Classes/KTPauseLayer.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/audio/android/../include/SimpleAudioEngine.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../audio/include/Export.h:
+
+jni/../../../Classes/VisibleRect.h:
+
+jni/../../../Classes/KTFactory.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/../extensions/cocos-ext.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./ExtensionMacros.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./GUI/CCControlExtension/CCControlExtensions.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControl.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlUtils.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/../extensions/ExtensionExport.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlButton.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCInvocation.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIScale9Sprite.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/GUIExport.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlColourPicker.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlHuePicker.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlSaturationBrightnessPicker.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlPotentiometer.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlSlider.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlStepper.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCControlExtension/CCControlSwitch.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./GUI/CCScrollView/CCScrollView.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./GUI/CCScrollView/CCTableView.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/GUI/CCScrollView/CCTableViewCell.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./physics-nodes/CCPhysicsDebugNode.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./physics-nodes/CCPhysicsSprite.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/AssetsManager.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/AssetsManagerEx.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/CCDownloader.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/CCEventAssetsManagerEx.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/Manifest.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/document.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/reader.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/rapidjson.h:
+
+/Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstring:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/allocators.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/encodings.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/meta.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/stack.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/strtod.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/ieee754.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/biginteger.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/diyfp.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/pow10.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/error/error.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../json/internal/strfunc.h:
+
+/Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/iterator:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./assets-manager/CCEventListenerAssetsManagerEx.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./ExtensionDeprecated.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIEditBox/UIEditBox.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/GUIDefine.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../base/ObjectFactory.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIButton.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIWidget.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayoutParameter.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./Particle3D/CCParticle3DRender.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./Particle3D/CCParticleSystem3D.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/extensions/./Particle3D/PU/CCPUParticleSystem3D.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/CocosGUI.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayout.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UICheckBox.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIAbstractCheckButton.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRadioButton.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIImageView.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIText.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextAtlas.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UILoadingBar.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIScrollView.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIListView.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UISlider.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextField.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UITextBMFont.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIPageView.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIHelper.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRichText.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIHBox.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIVBox.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIRelativeBox.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIVideoPlayer.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIWebView.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UIDeprecated.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UILayoutComponent.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../ui/UITabControl.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../editor-support/cocostudio/CocosStudioExtension.h:
+
+jni/../../../Classes/KTUtils.h:
+
+jni/../../../Classes/KTLayer.h:
+
+jni/../../../Classes/Layer_NavigationBar.hpp:
+
+jni/../../../Classes/HLAdManagerWrapper.hpp:
+
+jni/../../../Classes/AdmobWrapper.h:
+
+jni/../../../Classes/AdBaseWrapper.hpp:
+
+jni/../../../Classes/FBWrapper.h:
+
+jni/../../../Classes/UnityADWrapper.h:
+
+jni/../../../Classes/VungleWrapper.h:
+
+jni/../../../Classes/KLColor.hpp:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpClient.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpRequest.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpResponse.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpCookie.h:
+
+jni/../../../Classes/KLUtils.hpp:
+
+jni/../../../Classes/md5.h:
+
+jni/../../../Classes/HighScoreManager.hpp:
+
+jni/../../../Classes/HighScoreModel.hpp:
+
+jni/../../../Classes/KTDate.hpp:
+
+jni/../../../Classes/DataManager.h:
+
+/Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../tinyxml2/tinyxml2.h:
+
+/Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cctype:
+
+/Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/climits:
+
+/Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdio:
+
+/Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg:
+
+jni/../../../Classes/SpritePool.hpp:
+
+jni/../../../Classes/Layer_Setting.hpp:
+
+jni/../../../Classes/Item_Setting.hpp:

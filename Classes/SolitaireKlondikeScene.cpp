@@ -139,6 +139,7 @@ bool SolitaireKlondikeScene::init(bool ischallenge) {
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    auto mgr = DataManager::getInstance();
     
     //sound
     Audio::getInstance()->playBgMusic(WordFactor::MUSIC_BGM);
@@ -149,12 +150,11 @@ bool SolitaireKlondikeScene::init(bool ischallenge) {
     
     // 背景图片
     //theme
-    
     auto sprite = ImageView::create(DataManager::getInstance()->getThemeFile());
     sprite->setAnchorPoint(Vec2::ANCHOR_MIDDLE);
     sprite->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2));
-    
-    if (DataManager::getInstance()->getThemeID() == 2){
+    auto themeSet = mgr->getThemeSet(mgr->getSelectThemeSetName());
+    if (themeSet->getThemeName() == "theme_2"){
         sprite->setScale(winSize.width/1136, winSize.height/1136);
     } else {
         sprite->setScale(1);
@@ -170,6 +170,13 @@ bool SolitaireKlondikeScene::init(bool ischallenge) {
         if (tag == 0) {
             auto la = Layer_Setting::create();
             this->addChild(la, 2048);
+        }
+        else if (tag == 1){
+        
+            auto la = Layer_ThemeSet::create();
+            auto sc = Scene::create();
+            sc->addChild(la);
+            Director::getInstance()->pushScene(sc);
         }
         else if (tag == 2) {
             KLRestartLayer *la = KLRestartLayer::create(_isDailyChanllenge);
@@ -502,12 +509,12 @@ bool SolitaireKlondikeScene::init(bool ischallenge) {
     auto showNewThemeFunc = [=](){
         
         
-        if(UserDefault::getInstance()->getBoolForKey("KL_SHOW_ThanksGiving") == false){
+        if(mgr->isHappyChrismtasShowed() == false){
             
             auto la = KLThanksGivingLayer::create();
             this->addChild(la, 2048);
             
-            UserDefault::getInstance()->setBoolForKey("KL_SHOW_ThanksGiving", true);
+            mgr->setHappyChrismtasShowed(true);
         }
     };
 
@@ -530,32 +537,93 @@ bool SolitaireKlondikeScene::init(bool ischallenge) {
 }
 
 void SolitaireKlondikeScene::updateBadge(Ref *sender){
+    
+    _bottomMenu->setItemBadge(1, DataManager::getInstance()->isThemeSetNew());
+}
 
-    bool flag = UserDefault::getInstance()->getBoolForKey("KL_CUSTOM_CARDBACK_CLICK") == false || UserDefault::getInstance()->getBoolForKey("KL_CUSTOM_THEME_CLICK") == false;
-    _bottomMenu->setItemBadge(0, flag);
+void SolitaireKlondikeScene::applySetupTheme(string themeName){
+    auto mgr = DataManager::getInstance();
+    auto fu = FileUtils::getInstance();
+    auto writablePath = fu->getWritablePath();
+    auto tc = Director::getInstance()->getTextureCache();
+    //theme set
+    ThemeSetItem *themeSetItem = nullptr;
+    {
+        
+        auto valueMap = fu->getValueMapFromFile(writablePath + themeName + "/" + "data.plist");
+        
+        ThemeSetItem *item = new ThemeSetItem();
+        item->setName(valueMap["_name"].asString());
+        string previewfile = writablePath + themeName + "/" + valueMap["_previewFile"].asString();
+        item->setPreviewFile(previewfile);
+        item->setIsNew(valueMap["_isNew"].asBool());
+        item->setFaceName(valueMap["_faceName"].asString());
+        item->setCardbackName(valueMap["_cardbackName"].asString());
+        item->setThemeName(valueMap["_themeName"].asString());
+        mgr->addSetupThemeSet(item);
+        item->release();
+        tc->removeTextureForKey(previewfile);
+        
+        themeSetItem = item;
+    }
+    
+    
+    //theme bg
+    ThemeItem *item = new ThemeItem();
+    item->setName(themeSetItem->getThemeName());
+    string bgfile = writablePath + themeName + "/theme_bg.jpg";
+    string previewfile = writablePath + themeName + "/theme_preview.png";
+    item->setBgFile(bgfile);
+    item->setPreviewFile(previewfile);
+    item->setIsNew(true);
+    mgr->addSetupTheme(item);
+    item->release();
+    
+    
+    tc->removeTextureForKey(bgfile);
+    tc->removeTextureForKey(previewfile);
+    
+    //cardback
+    if (themeSetItem->getCardbackName() == themeName + "_cardback") {
+        string cardbackfile = writablePath + themeName + "/cardback.png";
+        CardbackItem *cbItem = new CardbackItem();
+        cbItem->setName(themeSetItem->getCardbackName());
+        cbItem->setFile(cardbackfile);
+        cbItem->setPreviewFile(cardbackfile);
+        cbItem->setIsNew(true);
+        mgr->addSetupCardback(cbItem);
+        cbItem->release();
+        CCLOG("cardbackfile = %s", cardbackfile.c_str());
+    }
+    
+    //face
+    if (themeSetItem->getFaceName() == themeName + "_face")
+    {
+        FaceItem *item = new FaceItem();
+        item->setName(themeSetItem->getFaceName());
+        string filePrefix = writablePath + themeName + "/faces/";
+        string previewfile = writablePath + themeName + "/faces/1/13.png";
+        item->setFilePrefix(filePrefix);
+        item->setPreviewFile(previewfile);
+        item->setIsNew(true);
+        mgr->addSetupFace(item);
+        item->release();
+        
+        tc->removeTextureForKey(previewfile);
+    }
 }
 
 void SolitaireKlondikeScene::showAskForSetupTheme(string themeName){
 
+    applySetupTheme(themeName);
     vector<string> btns;
     btns.push_back("确定");
     KLAlertLayer::show("提示", "应用新的主题?", "取消", btns, [=](KLAlertLayer *layer, int buttonIdx){
         if(buttonIdx == 1){
             auto mgr = DataManager::getInstance();
-            ThemeItem *item = new ThemeItem();
-            item->setName(themeName);
-            auto writablePath = FileUtils::getInstance()->getWritablePath();
-            string bgfile = writablePath + themeName + "_bg.jpg";
-            string previewfile = writablePath + themeName + "_preview.png";
-            item->setBgFile(bgfile);
-            item->setPreviewFile(previewfile);
-            mgr->addSetupTheme(item);
-            item->release();
-            
-            Director::getInstance()->getTextureCache()->removeTextureForKey(bgfile);
-            Director::getInstance()->getTextureCache()->removeTextureForKey(previewfile);
-
-            mgr->changeTheme(mgr->getThemeID(item));
+            mgr->changeThemeSet(themeName);
+            Director::getInstance()->popToRootScene();
+        } else {
             Director::getInstance()->popToRootScene();
         }
     });
@@ -638,11 +706,13 @@ void SolitaireKlondikeScene::updateLayout(){
     
     HLAdManagerWrapper::hideBanner();
     _themeBg->setPosition(Vec2(winSize.width/2, winSize.height/2));
-    auto themeID = DataManager::getInstance()->getThemeID();
-    if(themeID == 1){
+    auto mgr = DataManager::getInstance();
+    auto themeSet = mgr->getThemeSet(mgr->getSelectThemeSetName());
+    auto themeID = themeSet->getThemeName();
+    if(themeID == "theme_1"){
         _themeBg->loadTexture(DataManager::getInstance()->getThemeFile());
         _themeBg->setScale(1);
-    } else if (themeID == 2){
+    } else if (themeID == "theme_2"){
         _themeBg->setScale(winSize.width/1136, winSize.height/1136);
     } else {
         _themeBg->setScale(1);
@@ -782,7 +852,7 @@ void SolitaireKlondikeScene::updateLayout(){
 }
 
 void SolitaireKlondikeScene::onShareFinish(Ref *sender){
-
+    auto mgr = DataManager::getInstance();
     bool flag = DataManager::getInstance()->getFirstShared();
     if (!flag) {
         
@@ -790,13 +860,23 @@ void SolitaireKlondikeScene::onShareFinish(Ref *sender){
         
         auto la = KLShareSuccessLayer::create();
         la->onClick = [=](){
-            auto la = Layer_CardBack::create();
+            auto la = Layer_ThemeSet::create();
             auto sc = Scene::create();
             sc->addChild(la);
             Director::getInstance()->pushScene(sc);
+            {
+                auto la = Layer_CustomTheme::create();
+                auto sc = Scene::create();
+                sc->addChild(la);
+                Director::getInstance()->pushScene(sc);
+            }
         };
         addChild(la, 2048);
         DataManager::getInstance()->setFirstShared(true);
+        auto item = mgr->getCardbacks().at(2);
+        item->setPreviewFile("shared/cardback/2.png");
+        item->setFile("shared/cardback/2.png");
+        item->setIsNew(true);
     }
 }
 
@@ -809,11 +889,12 @@ void SolitaireKlondikeScene::setBottomVisible(bool value){
             auto seq = Sequence::create(MoveTo::create(0.3f, Vec2(0, 0)), NULL);
             _bottomMenu->runAction(seq);
             indicator->runAction(RotateTo::create(0.3f, 0));
-            
+            _bottomMenu->show(true);
         } else {
             _bottomMenu->stopAllActions();
             auto seq = Sequence::create(MoveTo::create(0.3f, Vec2(0, -_bottomMenu->getContentSize().height)), NULL);
             _bottomMenu->runAction(seq);
+            _bottomMenu->hide(true);
             indicator->runAction(RotateTo::create(0.3f, 180));
         }
     }
@@ -839,19 +920,18 @@ void SolitaireKlondikeScene::onEnter(){
             
             bool awarded = json["is_awarded"].GetInt() == 1;
             if (awarded) {
-                _bottomMenu->setItemBadge(1, false);
+                _bottomMenu->setConerItemBadge(0, false);
             } else {
-                _bottomMenu->setItemBadge(1, true);
+                _bottomMenu->setConerItemBadge(0, true);
             }
         } else {
-            _bottomMenu->setItemBadge(1, false);
+            _bottomMenu->setConerItemBadge(0, false);
         }
     }, [=](std::string error){
-        _bottomMenu->setItemBadge(1, false);
+        _bottomMenu->setConerItemBadge(0, false);
     });
     
-    bool flag = UserDefault::getInstance()->getBoolForKey("KL_CUSTOM_CARDBACK_CLICK") == false || UserDefault::getInstance()->getBoolForKey("KL_CUSTOM_THEME_CLICK") == false;
-    _bottomMenu->setItemBadge(0, flag);
+    _bottomMenu->setItemBadge(1, DataManager::getInstance()->isThemeSetNew());
     
     if(!_checkUpdate){
         KLUpdateLayer::show();
@@ -988,7 +1068,7 @@ void SolitaireKlondikeScene::quitDailyChallenge(){
     
     //退出 每日挑战
     _quitChanllengeButton->setVisible(false);
-    _bottomMenu->setItemVisible(1, true);
+    _bottomMenu->setConerItemVisible(0, true);
     _isDailyChanllenge = false;
     //                    this->NTFNewGameCallback(nullptr);
     DataManager::getInstance()->setChanlleged(true);
@@ -1139,17 +1219,19 @@ void SolitaireKlondikeScene::update(float dt){
 
 void SolitaireKlondikeScene::refresh(){
     //主题
+    auto mgr = DataManager::getInstance();
+    auto themeSet = mgr->getThemeSet(mgr->getSelectThemeSetName());
     _themeBg->loadTexture(DataManager::getInstance()->getThemeFile());
-    auto themeID = DataManager::getInstance()->getThemeID();
-    if(themeID == 1){
+    auto themeID = DataManager::getInstance()->getSelectThemeName();
+    if(themeID == "theme_1"){
         _themeBg->setScale(1);
-    } else if (themeID == 2){
+    } else if (themeID == "theme_2"){
         _themeBg->setScale(winSize.width/1136, winSize.height/1136);
     } else {
         _themeBg->setScale(1);
     }
     // 移动牌的动画时间
-    switch (DataManager::getInstance()->getSettings()->m_action) {
+    switch (1) {
         case enum_action_1x:
             m_tweem_card_move_speed = TWEEN_CARD_MOVE_SPEED_1X;
             break;
@@ -1164,9 +1246,9 @@ void SolitaireKlondikeScene::refresh(){
     }
     
     // 设定规则
-    SolitaireKlondikeViewModel::_dropCount = DataManager::getInstance()->getSettings()->m_chou3card ? 3 : 1;
+    SolitaireKlondikeViewModel::_dropCount = mgr->isChow3Card() ? 3 : 1;
     // 设定左右手模式
-    m_l_r_mode = DataManager::getInstance()->getSettings()->m_right_hand;
+    m_l_r_mode = mgr->isUseRightHand();
     
     
     // 添加基础碓的空白牌
@@ -1230,7 +1312,7 @@ void SolitaireKlondikeScene::refresh(){
     }
     
     //比赛信息
-    _infoParent->setVisible(DataManager::getInstance()->getSettings()->m_time_score == enum_time_on);
+    _infoParent->setVisible(mgr->isShowMatchInfo());
 }
 
 void SolitaireKlondikeScene::initBlank(){
@@ -2069,7 +2151,7 @@ bool SolitaireKlondikeScene::checkNoMove(){
     }
     
     Vector<Trump*> cards;
-    if (DataManager::getInstance()->getSettings()->m_chou3card) {
+    if (DataManager::getInstance()->isChow3Card()) {
         auto openCards = _viewModel->getOpenStockCards();
         if (openCards.size() != 0) {
             cards.pushBack(openCards.back());
@@ -2544,9 +2626,9 @@ void SolitaireKlondikeScene::OnShowNextMoveCallback(cocos2d::Ref* pSender){
 
 void SolitaireKlondikeScene::onGameStart(){
     //统计
-    _gameStartChou3 = DataManager::getInstance()->getSettings()->m_chou3card;
+    _gameStartChou3 = DataManager::getInstance()->isChow3Card();
     auto st = *DataManager::getInstance()->getStatisticAll();
-    if (DataManager::getInstance()->getSettings()->m_chou3card) {
+    if (DataManager::getInstance()->isChow3Card()) {
         auto sm = st.statistics_mode[1];
         sm.played++;
         st.statistics_mode[1] = sm;
@@ -2618,7 +2700,7 @@ void SolitaireKlondikeScene::onGameEnd(){
         std::unordered_map<std::string, std::string> content;
         content["uid"] = iOSWrapper::getUserID();
         content["data"] = TrumpModel::create()->getSequenceString();
-        content["cards"] = DataManager::getInstance()->getSettings()->m_chou3card ? "3" : "1";
+        content["cards"] = DataManager::getInstance()->isChow3Card() ? "3" : "1";
         content["status"] = "1";
         
         std::string os = "1";
@@ -2737,7 +2819,7 @@ void SolitaireKlondikeScene::onGameCancel(){
         std::unordered_map<std::string, std::string> content;
         content["uid"] = iOSWrapper::getUserID();
         content["data"] = TrumpModel::create()->getSequenceString();
-        content["cards"] = DataManager::getInstance()->getSettings()->m_chou3card ? "3" : "1";
+        content["cards"] = DataManager::getInstance()->isChow3Card() ? "3" : "1";
         content["status"] = "0";
         
         std::string os = "1";
@@ -2783,7 +2865,7 @@ void SolitaireKlondikeScene::NTFNewGameWinnalbeCallback(cocos2d::Ref* pSender){
 
 void SolitaireKlondikeScene::NTFDailyGameWinnalbeCallback(cocos2d::Ref* pSender){
     _quitChanllengeButton->setVisible(true);
-    _bottomMenu->setItemVisible(1, false);
+    _bottomMenu->setConerItemVisible(0, false);
     _isDailyChanllenge = true;
     startGame(3);
 }
@@ -2859,7 +2941,7 @@ void SolitaireKlondikeScene::startGame(int gameType){
     if(gameType == 0){
         std::unordered_map<std::string, std::string> content;
         content["uid"] = iOSWrapper::getUserID();
-        content["cards"] = DataManager::getInstance()->getSettings()->m_chou3card ? "3" : "1";
+        content["cards"] = DataManager::getInstance()->isChow3Card() ? "3" : "1";
         content["level"] = StringUtils::format("%f", KLUtils::getUserAbility());
         content["games"] = StringUtils::format("%d", KLUtils::getUserPlayNum());
         std::unordered_map<std::string, std::string> param;
@@ -2872,7 +2954,7 @@ void SolitaireKlondikeScene::startGame(int gameType){
         
         std::unordered_map<std::string, std::string> content;
         content["uid"] = iOSWrapper::getUserID();
-        content["cards"] = DataManager::getInstance()->getSettings()->m_chou3card ? "3" : "1";
+        content["cards"] = DataManager::getInstance()->isChow3Card() ? "3" : "1";
         content["level"] = StringUtils::format("%f", KLUtils::getUserAbility());
         content["games"] = StringUtils::format("%d", KLUtils::getUserPlayNum());
         std::unordered_map<std::string, std::string> param;
@@ -4471,7 +4553,7 @@ void SolitaireKlondikeScene::endTween() {
             }
         }
         
-        if (DataManager::getInstance()->getSettings()->m_chou3card || _isVegasOn) {
+        if (DataManager::getInstance()->isChow3Card() || _isVegasOn) {
             int stock = 0;
             stock += _viewModel->getFieldRowSize(SolitaireKlondikeViewModel::INDEX_STOCK_OPEN_X);
             stock += _viewModel->getFieldRowSize(SolitaireKlondikeViewModel::INDEX_STOCK_CLOSE_X);

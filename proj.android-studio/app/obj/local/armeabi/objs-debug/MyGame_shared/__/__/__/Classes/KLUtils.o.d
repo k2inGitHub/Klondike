@@ -356,7 +356,8 @@
   /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cstdarg \
   jni/../../../Classes/KTDate.hpp jni/../../../Classes/SpritePool.hpp \
   jni/../../../Classes/Layer_Setting.hpp \
-  jni/../../../Classes/KTPauseLayer.h
+  jni/../../../Classes/KTPauseLayer.h \
+  jni/../../../Classes/Item_Setting.hpp
 
 jni/../../../Classes/KLUtils.hpp:
 
@@ -1083,3 +1084,5 @@ jni/../../../Classes/SpritePool.hpp:
 jni/../../../Classes/Layer_Setting.hpp:
 
 jni/../../../Classes/KTPauseLayer.h:
+
+jni/../../../Classes/Item_Setting.hpp:

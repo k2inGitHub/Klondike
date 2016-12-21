@@ -351,6 +351,7 @@
   jni/../../../Classes/Localization.hpp jni/../../../Classes/KLUtils.hpp \
   jni/../../../Classes/md5.h jni/../../../Classes/Cell_Setting.hpp \
   jni/../../../Classes/Button_Highlight.hpp \
+  jni/../../../Classes/Item_Setting.hpp \
   jni/../../../Classes/DataManager.h \
   /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/external/flatbuffers/../tinyxml2/tinyxml2.h \
   /Users/songyang/Documents/android-ndk-r10c/sources/cxx-stl/gnu-libstdc++/4.8/include/cctype \
@@ -1079,6 +1080,8 @@ jni/../../../Classes/md5.h:
 jni/../../../Classes/Cell_Setting.hpp:
 
 jni/../../../Classes/Button_Highlight.hpp:
+
+jni/../../../Classes/Item_Setting.hpp:
 
 jni/../../../Classes/DataManager.h:
 

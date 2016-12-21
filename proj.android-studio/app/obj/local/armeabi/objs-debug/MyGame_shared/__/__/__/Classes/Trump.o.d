@@ -357,7 +357,7 @@
   /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpResponse.h \
   /Users/songyang/Documents/CocosProjects/Unit/Klondike/proj.android-studio/../cocos2d/cocos/3d/../network/HttpCookie.h \
   jni/../../../Classes/Localization.hpp jni/../../../Classes/KLUtils.hpp \
-  jni/../../../Classes/md5.h
+  jni/../../../Classes/md5.h jni/../../../Classes/Item_Setting.hpp
 
 jni/../../../Classes/Trump.h:
 
@@ -1088,3 +1088,5 @@ jni/../../../Classes/Localization.hpp:
 jni/../../../Classes/KLUtils.hpp:
 
 jni/../../../Classes/md5.h:
+
+jni/../../../Classes/Item_Setting.hpp:

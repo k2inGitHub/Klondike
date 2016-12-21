@@ -1,13 +1,13 @@
+////
+////  SettingController.h
+////  Klondike
+////
+////  Created by 宋扬 on 16/7/7.
+////
+////
 //
-//  SettingController.h
-//  Klondike
+//#import "KLBaseController.h"
 //
-//  Created by 宋扬 on 16/7/7.
+//@interface KLSettingController : KLBaseController
 //
-//
-
-#import "KLBaseController.h"
-
-@interface KLSettingController : KLBaseController
-
-@end
+//@end
